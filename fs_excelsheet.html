@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+
+
+    var data = {
+      "conf_sqr_amt": {
+        "0": "2017-12",
+        "1": "2018-12",
+        "2": "2019-12",
+        "3": "2020-12",
+        "4": "2021-12"
+      },
+      "is_audited": {
+        "0": "1",
+        "1": "1",
+        "2": "0",
+        "3": "1",
+        "4": "1"
+      },
+      "audit_firm_name": {
+        "0": "SERVICIOS CONTABLES, FISCALES Y ADMINISTRATIVOS",
+        "1": "sdds",
+        "2": "SERVICIOS CONTABLES, FISCALES Y ADMINISTRATIVOS",
+        "3": "CONSTRUCTORA E INMOBILIARI",
+        "4": "INMOBILIARI"
+      },
+      "audit_opinion": {
+        "0": "Desfavorable",
+        "1": "Con Salvedades",
+        "2": "Con Salvedades",
+        "3": "Favorable",
+        "4": "Favorable"
+      },
+      "balance_sheet": {
+        "0": "Correcto",
+        "1": "Correcto",
+        "2": "(NO CUADRA)",
+        "3": "(NO CUADRA)",
+        "4": "(NO CUADRA)"
+      },
+      "net_income_last_year": {
+        "0": "(Dif./Bal. y Edo.Res.)",
+        "1": "Correcto",
+        "2": "Correcto",
+        "3": "(Dif./Bal. y Edo.Res.)",
+        "4": "(Dif./Bal. y Edo.Res.)"
+      },
+      "cash_and_banks": {
+        "0": "226,207.00",
+        "1": "344,429.00",
+        "2": "1,624,996.00",
+        "3": "24,685,186.00",
+        "4": "3,158.00"
+      },
+
+      "customers": {
+        "0": "5,552,501.00",
+        "1": "7,346,566.00",
+        "2": "70.00",
+        "3": "1,572,953.00",
+        "4": "419,812.00"
+      },
+      "various_debtors": {
+        "0": "850,936.00",
+        "1": "505,121.00",
+        "2": "10,660,823.00",
+        "3": "1,905,889.00",
+        "4": "1,883,669.00"
+      },
+      "inventories": {
+        "0": "917,324.00",
+        "1": "875,091.00",
+        "2": "10.00",
+        "3": "5,598,631.00",
+        "4": "6,703,240.00"
+      },
+      "related_parties": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "4,606,241.00",
+        "4": "37,711,179.00"
+      },
+      "taxes_to_be_recovered": {
+        "0": "332,495.00",
+        "1": "332,495.00",
+        "2": "5,450.00",
+        "3": "7,627,783.00",
+        "4": "4,682,075.00"
+      },
+      "projects_in_process": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "4,540.00",
+        "3": "985,832.00",
+        "4": "35,567,731.00"
+      },
+      "advances_to_suppliers": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "2,230.00",
+        "3": "9,831,824.00",
+        "4": "2,110,361.00"
+      },
+      "current_assets": {
+        "0": "10.00",
+        "1": "9,403,702.00",
+        "2": "12,298,109.00",
+        "3": "56,814,339.00",
+        "4": "89,081,225.00"
+      },
+      "other_non_current_assets": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "3,450.00",
+        "3": "7,837,430.00",
+        "4": "9,490,790.00"
+      },
+      "accounts_receivable_lp": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "345,340.00",
+        "3": "5,409,078.00",
+        "4": "3,345,326.00"
+      },
+      "investments_and_cxc_lP": {
+        "0": "0.00",
+        "1": "0.00",
+        "2": "0.00",
+        "3": "0.00",
+        "4": "0.00"
+      },
+      "land_real_estate": {
+        "0": "420,000.00",
+        "1": "420,000.00",
+        "2": "-420,000.00",
+        "3": "5,454,536.00",
+        "4": "7,375,189.00"
+      },
+      "machinery_equipment": {
+        "0": "3,033,781.00",
+        "1": "3,033,781.00",
+        "2": "3,090,242.00",
+        "3": "38,889.00",
+        "4": "8,861,484.00"
+      },
+      "transportation_equipment": {
+        "0": "1,010,000.00",
+        "1": "1,010,000.00",
+        "2": "1,230,720.00",
+        "3": "72,947.00",
+        "4": "2,776,324.00"
+      },
+      "office_team": {
+        "0": "26,803.00",
+        "1": "26,803.00",
+        "2": "85,103.00",
+        "3": "19,284,200.00",
+        "4": "3,904,135.00"
+      },
+      "computer_equipment": {
+        "0": "71,044.00",
+        "1": "71,044.00",
+        "2": "71,044.00",
+        "3": "2,973,582.00",
+        "4": "5,958,859.00"
+      },
+      "accumulated_depreciation": {
+        "0": "-768,042.00",
+        "1": "-1,302,844.00",
+        "2": "-1,135,786.00",
+        "3": "2,265,858.00",
+        "4": "5,814,914.00"
+      },
+      "other_assets": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "3,116,701.00",
+        "4": "1,569,031.00"
+      },
+      "fixed_assets": {
+        "0": "3,793,586.00",
+        "1": "3,258,784.00",
+        "2": "2,921,323.00",
+        "3": "33,206,713.00",
+        "4": "36,259,936.00"
+      },
+      "installation_expense_amortization": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "1,191,365.00",
+        "4": "3,408,552.00"
+      },
+      "deferred_tax": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "161,528.00",
+        "4": "1,059,617.00"
+      },
+      "deposits_in_guarantee": {
+        "0": "650,000.00",
+        "1": "650,000.00",
+        "2": "10.00",
+        "3": "4,149,911.00",
+        "4": "5,003,791.00"
+      },
+      "deferred_assets": {
+        "0": "650,000.00",
+        "1": "650,000.00",
+        "2": "10.00",
+        "3": "5,502,804.00",
+        "4": "9,471,960.00"
+      },
+      "total_active": {
+        "0": "0.00",
+        "1": "0.00",
+        "2": "0.00",
+        "3": "0.00",
+        "4": "0.00"
+      },
+      "stfl_plus_pclp": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "5,432,881.00",
+        "4": "776,916.00"
+      },
+      "providers": {
+        "0": "1,078,668.00",
+        "1": "865,420.00",
+        "2": "512,038.00",
+        "3": "3,879,559.00",
+        "4": "4,963,296.00"
+      },
+      "p_related_parties": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "7,119,603.00",
+        "4": "692,162.00"
+      },
+      "taxes_paying_cp": {
+        "0": "795,146.00",
+        "1": "37,480.00",
+        "2": "57,235.00",
+        "3": "2,840,230.00",
+        "4": "5,757,556.00"
+      },
+      "various_creditors": {
+        "0": "750,000.00",
+        "1": "935,834.00",
+        "2": "150,000.00",
+        "3": "4,271,399.00",
+        "4": "4,001,343.00"
+      },
+      "advance_customers": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "3,572,066.00",
+        "4": "9,319,710.00"
+      },
+      "pst_in_short_time": {
+        "0": "4.00",
+        "1": "1,838,734.00",
+        "2": "719,273.00",
+        "3": "27,115,738.00",
+        "4": "25,510,983.00"
+      },
+      "ltfl": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "1,894,030.00",
+        "4": "4,173,761.00"
+      },
+      "pst_various_creditors": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "6,434,782.00",
+        "4": "6,231,908.00"
+      },
+      "pst_deferred_tax": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "1,305,524.00",
+        "4": "4,782,294.00"
+      },
+      "laboral_obligations": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "2,188,072.00",
+        "4": "1,814,750.00"
+      },
+      "cxp_other_lp_liabilities": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "3,828,505.00",
+        "4": "907,835.00"
+      },
+      "pst_long_term_liabilities": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "15,650,913.00",
+        "4": "8.00"
+      },
+      "totally_passive": {
+        "0": "2,623,814.00",
+        "1": "1,838,734.00",
+        "2": "719,273.00",
+        "3": "42,766,651.00",
+        "4": "43,421,531.00"
+      },
+      "social_capital": {
+        "0": "1,500,000.00",
+        "1": "1,500,000.00",
+        "2": "1,500,000.00",
+        "3": "7,796,360.00",
+        "4": "825,948.00"
+      },
+      "legal_reserve": {
+        "0": "194,757.00",
+        "1": "194,757.00",
+        "2": "1,194,757.00",
+        "3": "7,210,971.00",
+        "4": "5,308,504.00"
+      },
+      "contributions_to_capitalize": {
+        "0": "1,500,000.00",
+        "1": "1,500,000.00",
+        "2": "10.00",
+        "3": "1,789,819.00",
+        "4": "9,543,922.00"
+      },
+      "share_subscription_premium": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "2,870,060.00",
+        "4": "5,237,388.00"
+      },
+      "other_capital_accounts": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "7,326,466.00",
+        "4": "7,655,802.00"
+      },
+      "acumulated_utilities": {
+        "0": "3,667,407.00",
+        "1": "6,504,478.00",
+        "2": "9,797,716.00",
+        "3": "6,594,178.00",
+        "4": "4,387,063.00"
+      },
+      "profit_year": {
+        "0": "2,837,071.00",
+        "1": "1,774,517.00",
+        "2": "1,835,396.00",
+        "3": "1,821,755.00",
+        "4": "9,026,457.00"
+      },
+      "pst_stockholders_equity": {
+        "0": "15.00",
+        "1": "11,473,752.00",
+        "2": "14,327,869.00",
+        "3": "35,409,609.00",
+        "4": "0.00"
+      },
+      "pst_liabilities_capital": {
+        "0": "19.00",
+        "1": "13,312,486.00",
+        "2": "15,047,142.00",
+        "3": "78,176,260.00",
+        "4": "80.00"
+      },
+      "months_understood": {
+        "0": "1",
+        "1": "2",
+        "2": "3",
+        "3": "11",
+        "4": "10"
+      },
+      "avg_monthly_sales": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "1,715,954.00",
+        "4": "774,711.90"
+      },
+      "net_sales": {
+        "0": "12,828,254.00",
+        "1": "30,963,335.00",
+        "2": "23,649,748.00",
+        "3": "1,715,954.00",
+        "4": "7,747,119.00"
+      },
+      "sales_cost": {
+        "0": "7,852,463.00",
+        "1": "28,364,508.00",
+        "2": "18,786,230.00",
+        "3": "4,235,829.00",
+        "4": "3,813,997.00"
+      },
+      "gross_profit": {
+        "0": "10.00",
+        "1": "2,598,827.00",
+        "2": "4,863,518.00",
+        "3": "-2,519,875.00",
+        "4": "12.00"
+      },
+      "admin_expenses": {
+        "0": "13.00",
+        "1": "819,408.00",
+        "2": "2,984,835.00",
+        "3": "3,141,494.00",
+        "4": "19.00"
+      },
+      "selling_expenses": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "1,693,276.00",
+        "4": "17.00"
+      },
+      "total_opr_cost": {
+        "0": "2,177,863.00",
+        "1": "819,408.00",
+        "2": "2,984,835.00",
+        "3": "4,834,770.00",
+        "4": "9,495,916.00"
+      },
+      "operating_income": {
+        "0": "2,797,928.00",
+        "1": "1,779,419.00",
+        "2": "1,878,683.00",
+        "3": "-7,354,645.00",
+        "4": "-5,562,794.00"
+      },
+      "fs_expenses": {
+        "0": "-39,143.00",
+        "1": "4,902.00",
+        "2": "43,287.00",
+        "3": "6,400,681.00",
+        "4": "601,290.00"
+      },
+      "fn_products": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "7,393,530.00",
+        "4": "1,098,000.00"
+      },
+      "profit_or_loss": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "6,792,418.00",
+        "4": "6,128,377.00"
+      },
+      "monetoty_position": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "3,867,745.00",
+        "4": "5,050,522.00"
+      },
+      "other_expenses": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "8,576,201.00",
+        "4": "4,775,443.00"
+      },
+      "extraordinary_items": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "4,307,367.00",
+        "4": "3,353,339.00"
+      },
+      "profit_before_imps": {
+        "0": "2,837,071.00",
+        "1": "1,774,517.00",
+        "2": "1,835,396.00",
+        "3": "-44,692,587.00",
+        "4": "-26,569,765.00"
+      },
+      "prov_of_it": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "3,233,048.00",
+        "4": "1,716,887.00"
+      },
+      "other_prov": {
+        "0": "3,456,765,430.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "6,891,256.00",
+        "4": "1,502,512.00"
+      },
+      "net_profit": {
+        "0": "-3,453,928,359.00",
+        "1": "1,774,517.00",
+        "2": "1,835,396.00",
+        "3": "-54,816,891.00",
+        "4": "-29,789,164.00"
+      },
+      "applied_depreciation": {
+        "0": "-534,802.00",
+        "1": "-534,802.00",
+        "2": "167,058.00",
+        "3": "3,401,644.00",
+        "4": "3,549,056.00"
+      },
+      "amortization_applied": {
+        "0": "10.00",
+        "1": "10.00",
+        "2": "10.00",
+        "3": "4,474,937.00",
+        "4": "1,156,089.00"
+      },
+      "rtnd_erng_asset_ratio": {
+        "0": "0.297605487",
+        "1": "0.488599800",
+        "2": "0.629340717",
+        "3": "0.060624767",
+        "4": "0.029712737"
+      },
+      "rtnd_erng_asset_ratio_sgnl": {
+        "0": "0",
+        "1": "0",
+        "2": "0",
+        "3": "0",
+        "4": "0"
+      },
+      "equity_to_asset_ratio": {
+        "0": "0.787080778",
+        "1": "0.861878991",
+        "2": "0.920327896",
+        "3": "0.325544640",
+        "4": "0.284356932"
+      },
+      "equity_to_asset_ratio_sgnl": {
+        "0": "0",
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "0"
+      },
+      "current_ratio": {
+        "0": "3.003057000",
+        "1": "5.114226419",
+        "2": "17.097971146",
+        "3": "2.095253281",
+        "4": "3.491877400"
+      },
+      "current_ratio_sgnl": {
+        "0": "0",
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "0"
+      },
+      "debt_service_ratio": {
+        "0": "0.000000000",
+        "1": "0.000000000",
+        "2": "0.000000000",
+        "3": "-0.659289174",
+        "4": "-0.949523360"
+      },
+      "debt_service_ratio_sgnl": {
+        "0": "0",
+        "1": "0",
+        "2": "0",
+        "3": "0",
+        "4": "0"
+      },
+      "rtrn_on_asset_ratio": {
+        "0": "-280.281962605",
+        "1": "0.133297192",
+        "2": "0.117893745",
+        "3": "-0.503968995",
+        "4": "-0.201756302"
+      },
+      "rtrn_on_asset_ratio_sgnl": {
+        "0": "0",
+        "1": "0",
+        "2": "0",
+        "3": "0",
+        "4": "0"
+      },
+      "signal_sum": {
+        "0": "0",
+        "1": "2",
+        "2": "2",
+        "3": "0",
+        "4": "0"
+      },
+      "index": {
+        "0": "1",
+        "1": "2",
+        "2": "2",
+        "3": "1",
+        "4": "1"
+      }
+    }
+
+    function numFormat(nm) {
+      let numPattern = /[, ]+/g;
+
+      return Number(nm.replace(numPattern, ""));
+    }
+
+    const d = new Date();
+
+    let newDataObj = {};
+    let someObj = {};
+    let stringFieldAr = ["conf_sqr_amt", "is_audited", "audit_firm_name", "audit_opinion", "balance_sheet", "net_income_last_year", "index"];
+    // transpose the object.
+    for (let i = 0; i < 5; i++) {
+      for (const key in data) {
+        if (!stringFieldAr.includes(key)) {
+          someObj[key] = numFormat(data[key][i]);
+        } else {
+          someObj[key] = (data[key][i]);
+        }
+      }
+      newDataObj[i] = someObj;
+      someObj = {};
+    }
+
+    for (let i = 0; i < 5; i++) {
+      // activo table
+      newDataObj[i]['current_assets'] = newDataObj[i]['cash_and_banks'] + newDataObj[i]['customers'] + newDataObj[i]['various_debtors'] + newDataObj[i]['inventories'] + newDataObj[i]['related_parties'] + newDataObj[i]['taxes_to_be_recovered'] + newDataObj[i]['projects_in_process'] + newDataObj[i]['advances_to_suppliers'];
+      newDataObj[i]['investments_and_cxc_lP'] = newDataObj[i]['accounts_receivable_lp'] + newDataObj[i]['other_non_current_assets'];
+      newDataObj[i]['fixed_assets'] = newDataObj[i]['land_real_estate'] + newDataObj[i]['machinery_equipment'] + newDataObj[i]['transportation_equipment'] + newDataObj[i]['office_team'] + newDataObj[i]['computer_equipment'] + newDataObj[i]['accumulated_depreciation'] + newDataObj[i]['other_assets'];
+      newDataObj[i]['deferred_assets'] = newDataObj[i]['installation_expense_amortization'] + newDataObj[i]['deferred_tax'] + newDataObj[i]['deposits_in_guarantee'];
+    
+      newDataObj[i]['total_active'] = newDataObj[i]['current_assets'] + newDataObj[i]['investments_and_cxc_lP'] + newDataObj[i]['fixed_assets'] + newDataObj[i]['deferred_assets'];
+    
+      // pasivo table
+      newDataObj[i]['pst_in_short_time'] = newDataObj[i]['stfl_plus_pclp'] + newDataObj[i]['providers'] + newDataObj[i]['p_related_parties'] + newDataObj[i]['taxes_paying_cp'] + newDataObj[i]['various_creditors'] + newDataObj[i]['advance_customers'];
+      newDataObj[i]['pst_long_term_liabilities'] = newDataObj[i]['ltfl'] + newDataObj[i]['pst_various_creditors'] + newDataObj[i]['pst_deferred_tax'] + newDataObj[i]['laboral_obligations'] + newDataObj[i]['cxp_other_lp_liabilities'];
+      newDataObj[i]['totally_passive'] = newDataObj[i]['pst_in_short_time'] + newDataObj[i]['pst_long_term_liabilities'];
+      newDataObj[i]['pst_stockholders_equity'] = newDataObj[i]['social_capital'] + newDataObj[i]['legal_reserve'] + newDataObj[i]['contributions_to_capitalize'] + newDataObj[i]['share_subscription_premium'] + newDataObj[i]['other_capital_accounts'] + newDataObj[i]['acumulated_utilities'] + newDataObj[i]['profit_year'];
+      newDataObj[i]['pst_liabilities_capital'] = newDataObj[i]['pst_stockholders_equity'] + newDataObj[i]['totally_passive'];
+     
+    // estado table 
+      newDataObj[i]['avg_monthly_sales'] = newDataObj[i]['net_sales'] / newDataObj[i]['months_understood'];
+      newDataObj[i]['gross_profit'] = newDataObj[i]['net_sales'] - newDataObj[i]['sales_cost'];
+      newDataObj[i]['total_opr_cost'] = newDataObj[i]['admin_expenses'] + newDataObj[i]['selling_expenses'];
+      newDataObj[i]['operating_income'] = newDataObj[i]['gross_profit'] - newDataObj[i]['total_opr_cost'];
+      newDataObj[i]['profit_before_imps'] = newDataObj[i]['operating_income'] - (newDataObj[i]['extraordinary_items'] + newDataObj[i]['other_expenses'] + newDataObj[i]['monetoty_position'] + newDataObj[i]['profit_or_loss'] + newDataObj[i]['fn_products'] + newDataObj[i]['fs_expenses']);
+      newDataObj[i]['net_profit'] = newDataObj[i]['profit_before_imps'] - (newDataObj[i]['prov_of_it'] + newDataObj[i]['other_prov']);
+      
+      newDataObj[i]['rtnd_erng_asset_ratio'] = newDataObj[i]['acumulated_utilities'] / newDataObj[i]['total_active'];
+      newDataObj[i]['equity_to_asset_ratio'] = newDataObj[i]['pst_stockholders_equity'] / newDataObj[i]['total_active'];
+      newDataObj[i]['current_ratio'] = newDataObj[i]['current_assets'] / newDataObj[i]['pst_in_short_time'];
+      newDataObj[i]['debt_service_ratio'] = newDataObj[i]['operating_income'] / (newDataObj[i]['stfl_plus_pclp'] + newDataObj[i]['ltfl'] + newDataObj[i]['cxp_other_lp_liabilities']);
+      newDataObj[i]['rtrn_on_asset_ratio'] = newDataObj[i]['net_profit'] / newDataObj[i]['total_active'];
+      
+      // newDataObj[i]['signal_sum'] = newDataObj[i]['rtnd_erng_asset_ratio'] + newDataObj[i]['equity_to_asset_ratio'] + newDataObj[i]['current_ratio'] + newDataObj[i]['debt_service_ratio'] + newDataObj[i]['rtrn_on_asset_ratio'];
+    }
+
+    let percntDataObj = {};
+    
+    for (let i = 0; i < 5; i++) {
+        // activo table=IF($D$40=$D$71,"Correcto","(NO CUADRA)")
+        //=IF($D$68=$D$98,"Correcto","(Dif./Bal. y Edo.Res.)")
+        percntDataObj[i] = {};
+        percntDataObj[i]['balance_sheet'] = newDataObj[i]['total_active'] === newDataObj[i]['pst_liabilities_capital'] ? "Correcto" : "(NO CUADRA)";
+        percntDataObj[i]['net_income_last_year'] = newDataObj[i]['profit_year'] === newDataObj[i]['net_profit'] ? "Correcto" : "(Dif./Bal. y Edo.Res.)";
+
+        percntDataObj[i]['cash_and_banks'] = newDataObj[i]['cash_and_banks'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['customers'] = newDataObj[i]['customers'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['various_debtors'] = newDataObj[i]['various_debtors'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['inventories'] = newDataObj[i]['inventories'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['related_parties'] = newDataObj[i]['related_parties'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['taxes_to_be_recovered'] = newDataObj[i]['taxes_to_be_recovered'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['projects_in_process'] = newDataObj[i]['projects_in_process'] / newDataObj[i]['total_active'];
+        percntDataObj[i]['advances_to_suppliers'] = newDataObj[i]['advances_to_suppliers'] / newDataObj[i]['total_active'];
+    
+    
+    
+        // on hold
+    }
+
+    
+
+    // for(const key in newDataObj['0']) {
+    //   document.write(newDataObj['0'][key], "<br>");
+
+
+    // }
+
+    const d4 = new Date();
+    console.log(d4.getTime() - d.getTime());
+    // console.log(newDataObj);
+    console.log(percntDataObj);
+  </script>
+</body>
+
+</html>

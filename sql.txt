@@ -1,0 +1,5 @@
+ALTER TABLE `tbl_financial_history`
+	ADD COLUMN `status` TINYINT NOT NULL DEFAULT 0 AFTER `application_type`,
+	ADD COLUMN `case_type` VARCHAR(255) NULL DEFAULT NULL AFTER `status`;
+ALTER TABLE `tbl_financial_history`
+	ADD COLUMN `analyst_id` INT NULL DEFAULT NULL AFTER `case_type`;
